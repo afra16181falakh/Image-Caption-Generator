@@ -7,6 +7,7 @@ from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2, preprocess_i
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
+
 # Load MobileNetV2 model
 mobilenet_model = MobileNetV2(weights="imagenet")
 mobilenet_model = Model(inputs=mobilenet_model.inputs, outputs=mobilenet_model.layers[-2].output)
@@ -73,6 +74,7 @@ if uploaded_image is not None:
         # Generate caption
         generated_caption = predict_caption(model, image_features, tokenizer, max_caption_length)
 
+        
         # Remove startseq and endseq
         generated_caption = generated_caption.replace("startseq", "").replace("endseq", "")
 
