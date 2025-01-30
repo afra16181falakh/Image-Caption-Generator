@@ -1,5 +1,3 @@
-Overview
-
 This project uses deep learning to generate captions for images. It employs MobileNetV2 for feature extraction (optimized for memory efficiency) and an LSTM-based model with an attention mechanism for generating captions. The app is interactive and built with Streamlit for easy usability.
 
 Features:
